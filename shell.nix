@@ -1,9 +1,13 @@
 let
-  pkgs = import <nixpkgs> {};
+    pkgs = import <nixpkgs> {};
 in pkgs.mkShell {
-  packages = [
-    (pkgs.python3.withPackages (python-pkgs: [
-      python-pkgs.colorama
-    ]))
-  ];
+	nativeBuildInputs = with pkgs.buildPackages; [
+        swiProlog
+		python3
+	];
+    packages = [
+        (pkgs.python3.withPackages (python-pkgs: [
+            python-pkgs.colorama
+        ]))
+    ];
 }

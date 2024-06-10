@@ -4,7 +4,7 @@ import os
 from subprocess import Popen, PIPE, STDOUT
 
 TEMP_FILE = "temp.pl"
-
+PROLOG_PROCESS = "swipl"
 
 use_s3 = True
 passed_args = sys.argv[1:]
@@ -58,7 +58,7 @@ open_file = open(TEMP_FILE, "w")
 open_file.write(file)
 open_file.close()
 
-prolog = Popen(["swipl", TEMP_FILE], stdin=PIPE, stdout=PIPE, stderr=STDOUT, text=True)
+prolog = Popen([PROLOG_PROCESS, TEMP_FILE], stdin=PIPE, stdout=PIPE, stderr=STDOUT, text=True)
 
 stdout_data = prolog.communicate(input=predicate)[0]
 

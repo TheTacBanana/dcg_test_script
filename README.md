@@ -12,9 +12,13 @@ If your predicate is an s/2 which doesn't generate a tree pass `--no-tree` as th
 
 Execute via `python dcg_test.py example.pl example.test --no-tree`
 
+`shell.nix` provided if you use Nix
+
 ## Requirements
 
 Tested on Python 3.11.9 on a Linux System (NixOs)
+
+Uses [Swi Prolog](https://www.swi-prolog.org/)
 
 Uses the Colorama Python Package
 
