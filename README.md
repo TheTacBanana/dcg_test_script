@@ -62,3 +62,7 @@ the man hires the woman --> Passed
 the men hire the woman --> Passed
 ...
 ```
+
+## Licence
+
+Licenced under MIT, feel free to do whatever, unlikely to receive updates or support in the future
